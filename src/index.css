@@ -34,6 +34,8 @@ body {
 }
 .movie-card .left img {
   height: 250px;
+  width: 200px;
+
   
 }
 .movie-card .right {

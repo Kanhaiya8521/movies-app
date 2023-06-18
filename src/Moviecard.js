@@ -1,18 +1,7 @@
 import { Component } from "react";
 
 class Moviecard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      title: "The Avengers",
-      plot: "Supernatural powers shown in the movies.",
-      price: 199,
-      rating: 8.9,
-      stars: 0,
-      fav: false,
-      cart: false,
-    };
-  }
+  
 
   addStar = () => {
     //setState form 1
@@ -43,19 +32,20 @@ class Moviecard extends Component {
     });
   }
   render() {
-    const { price, rating, stars, fav, cart } = this.state;
+    console.log(this.props.movie);
+    const { title, plot, poster, price, rating, stars, fav, cart } = this.props.movie;
     return (
       <div className="main">
         <div className="movie-card">
           <div className="left">
             <img
-              src="https://cdn.marvel.com/content/2x/mlou2_imax_oversize_1-sht_v2_online_lg_rev.jpg"
+              src={poster}
               alt="poster"
             />
           </div>
           <div className="right">
-            <div className="title">{this.state.title}</div>
-            <div className="plot">{this.state.plot}</div>
+            <div className="title">{title}</div>
+            <div className="plot">{plot}</div>
             <div className="price">Rs. {price}</div>
             <div className="footer">
               <div className="rating">{rating}</div>
