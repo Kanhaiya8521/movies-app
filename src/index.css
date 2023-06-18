@@ -93,7 +93,8 @@ footer.starCount {
 
 .footer .str-btn {
   width: 7px;
-  height: 7px
+  height: 7px;
+  cursor: pointer;
 }
 .footer button {
   font-size: 15px;
