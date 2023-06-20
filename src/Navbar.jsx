@@ -1,8 +1,7 @@
 import React from "react";
 import styles from './navbar.module.css';
 
-class Navbar extends React.Component {
-    render() {
+function Navbar(props) {
         return (
           <>
             <div className={styles.nav}>
@@ -13,12 +12,11 @@ class Navbar extends React.Component {
                   alt="cart-icon"
                   className={styles.cartImg}
                 />
-                <span className={styles.cartCount}>{this.props.cartCount}</span>
+                <span className={styles.cartCount}>{props.cartCount}</span>
               </div>
             </div>
           </>
         );
-    }
 
 }
 

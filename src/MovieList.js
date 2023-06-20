@@ -1,11 +1,6 @@
-import { Component } from "react";
 import Moviecard from "./Moviecard";
-import {movies} from './moviesData';
-class MovieList extends Component {
-  render() {
-    console.log("this.props.addstar", this.props);
-
-    const { movies, addStar, subStar, buttonToggleCart, buttonToggleFav } = this.props;
+function MovieList(props) {
+    const { movies, addStar, subStar, buttonToggleCart, buttonToggleFav } = props;
     return (
       <>
         {movies.map((movie, index) => (
@@ -20,7 +15,6 @@ class MovieList extends Component {
         ))}
       </>
     );
-  }
 }
 // Moviecard.defaultProps = {
 //     title: "Hello",
